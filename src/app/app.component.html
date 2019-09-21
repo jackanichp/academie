@@ -1,0 +1,102 @@
+<div class="container">
+    <img class="container.image" src="assets/img/header1.jpg" alt="container image" style="width:100%;">
+    <div class="text-block">
+      <p>La philosophie à l’Académie de Berlin (1745-1804)</p>
+    </div>
+  </div> 
+  
+<mat-sidenav-container>
+    <mat-sidenav  #sidenav role="navigation">
+     <mat-nav-list>
+        <a mat-list-item
+          routerLink="/projet">
+          <mat-icon class="icon">school</mat-icon>
+            <span class="label">Projet</span>
+        </a>
+        <a mat-list-item
+          routerLink="/contributeurs">
+          <mat-icon class="icon">people</mat-icon>  
+            <span class="label">Contributeurs</span>
+        </a>
+        <a mat-list-item
+          routerLink="/traveaux">
+          <mat-icon class="icon">view_list</mat-icon>  
+            <span class="label">Travaux</span>
+        </a>
+        <a mat-list-item
+          routerLink="/bibliographie">
+          <mat-icon class="icon">view_list</mat-icon>  
+            <span class="label">Bibliographie</span>
+        </a>
+        <a mat-list-item
+          routerLink="/documents">
+          <mat-icon class="icon">archive</mat-icon>  
+            <span class="label">Documents</span>
+        </a>
+        <a mat-list-item
+          *ngIf="auth.isAuthenticated()"
+          routerLink="/">
+          <mat-icon class="icon">home</mat-icon>
+            <span class="label">Accueil</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="white">
+       <div fxHide.gt-md>
+         <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+       <div>
+         <a routerLink="/">
+          <mat-icon class="icon">home</mat-icon>  
+          <span class="label">Accueil</span>
+         </a>
+       </div>
+       <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.lt-lg>
+          <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+              <li>
+                  <a 
+                  routerLink="/projet">
+                    <mat-icon class="icon">school</mat-icon>
+                    <span class="label">Projet</span>
+                  </a>
+              </li>
+              <li>
+                  <a 
+                  routerLink="/contributeurs">
+                    <mat-icon class="icon">people</mat-icon>
+                    <span class="label">Contributeurs</span>
+                  </a>
+              </li>
+              <li>
+                  <a 
+                  routerLink="/traveaux">
+                    <mat-icon class="icon">view_list</mat-icon>
+                    <span class="label">Travaux</span>
+                  </a>
+              </li> 
+              <li>
+                  <a 
+                  routerLink="/bibliographie">
+                    <mat-icon class="icon">view_list</mat-icon>
+                    <span class="label">Bibliographie</span>
+                  </a>
+              </li>
+              <li>
+                  <a 
+                  routerLink="/documents">
+                    <mat-icon class="icon">archive</mat-icon>
+                    <span class="label">Documents</span>
+                  </a>
+              </li>
+          </ul>
+       </div>
+      </mat-toolbar>
+      <main>
+        <router-outlet>
+        </router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

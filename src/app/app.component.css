@@ -1,0 +1,61 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    width: 175px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Courier New';
+    font-size: 14pt;
+  }
+  
+  a:hover,
+  a:active {
+    color: gray;
+  }
+  
+  .navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .label {
+    display: inline-block;
+    line-height: 30px;
+    margin: 0;
+    width: 85%;
+  }
+
+    .container {
+      width: 100%;
+      display: block;
+      position: relative;
+      border: 20px solid rgb(255, 255, 255);
+      box-sizing: border-box;
+      border-bottom: 0px;
+    }
+
+    .container > .container-image {
+      width: 100%;
+      display: block;
+      
+    }
+
+    .text-block {
+      
+      position: absolute;
+      bottom: 4px;
+      right: 0px;
+      background-color: black;
+      color: white;
+      font-family: 'Courier New';
+      padding-left: 10px;
+      padding-right: 10px;
+      
+    }
